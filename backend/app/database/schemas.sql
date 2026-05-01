@@ -1,0 +1,3 @@
+-- AutoShield AI — Postgres DDL
+-- Tables: customers, vehicles, quotes, policies, claims, hitl_queue, audit_log, fraud_signals
+-- See docs/architecture/data_model.png

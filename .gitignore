@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+.next/
+out/
+.turbo/
+dist/
+build/
+*.log
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ML artifacts
+backend/app/ml_models/artifacts/*.pkl
+backend/app/ml_models/artifacts/*.joblib
+*.h5
+*.onnx
+
+# Data (don't commit large files)
+backend/data/damage_images/*.jpg
+backend/data/damage_images/*.png
+!backend/data/damage_images/.gitkeep
+backend/data/sample_documents/*.pdf
+!backend/data/sample_documents/.gitkeep
+
+# ChromaDB local persistence
+chroma_db/
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Docker
+.docker/
+
+# Logs
+logs/
+*.log
+
+# Eval reports
+backend/app/evals/reports/*.html
+backend/app/evals/reports/*.json
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# OS
+Thumbs.db
