@@ -1,1 +1,0 @@
-"""Pydantic Settings — loads .env."""

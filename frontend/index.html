@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Insurance AI Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🚗</span>
+        <div>
+          <h1>AutoShield AI</h1>
+          <p class="tagline">Multi-Agent Car Insurance Assistant</p>
+        </div>
+      </div>
+      <div class="agent-indicator" id="agentIndicator">
+        <span class="agent-dot"></span>
+        <span class="agent-name">Routing…</span>
+      </div>
+    </header>
+
+    <main class="chat-window" id="chatWindow">
+      <div class="message bot">
+        <div class="bubble">
+          👋 Hi! I'm AutoShield AI. I can help you with:
+          <ul>
+            <li>📋 Get a <strong>quote</strong> for your car</li>
+            <li>🛠️ File a <strong>claim</strong> (upload damage photos)</li>
+            <li>❓ Answer <strong>policy questions</strong> (NCB, IDV, coverage, etc.)</li>
+          </ul>
+          <em>Try: "Get me a quote for a Maruti Swift" or "What is NCB?"</em>
+        </div>
+      </div>
+    </main>
+
+    <div class="input-area">
+      <div class="image-preview" id="imagePreview"></div>
+      <form id="chatForm">
+        <button type="button" class="upload-btn" id="uploadBtn" title="Upload damage photo">📎</button>
+        <input type="file" id="fileInput" accept="image/*" hidden />
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Ask about quotes, claims, or policy questions..."
+          autocomplete="off"
+        />
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+      <div class="suggestions">
+        <button class="suggestion" data-msg="Get me a quote for a Maruti Swift, 2 years old, 1 NCB">Quote for Swift</button>
+        <button class="suggestion" data-msg="What is the NCB ladder?">What is NCB?</button>
+        <button class="suggestion" data-msg="What is covered under comprehensive insurance?">Comprehensive coverage</button>
+        <button class="suggestion" data-msg="I want to file a claim. My policy is POL-2026-12345.">File a claim</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
