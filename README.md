@@ -139,40 +139,6 @@ car-insurance-agent/
 - Docker & Docker Compose
 - OpenAI API key (~$5–10 covers extensive testing)
 
-### Local Development
-
-```bash
-# 1. Clone
-git clone https://github.com/k21academyuk/car-insurance-agent.git
-cd car-insurance-agent
-
-# 2. Configure
-cp backend/.env.example backend/.env
-# Edit backend/.env — add your OPENAI_API_KEY
-
-# 3. Build & run
-cd deployment/docker
-docker compose up -d --build
-
-# 4. Ingest the knowledge base (one-time)
-docker compose exec app python scripts/ingest_kb.py
-
-# 5. Open the UI
-open http://localhost:8000
-```
-
-That's it. No Postgres, no Redis, no separate frontend service — just one container.
-
-### Manual run (no Docker)
-
-```bash
-cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env  # add your OPENAI_API_KEY
-python scripts/ingest_kb.py
-uvicorn app.main:app --reload
-# Open http://localhost:8000
 ```
 
 ## 🚢 Deploy to AWS EC2
