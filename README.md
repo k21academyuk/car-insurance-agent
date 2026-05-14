@@ -156,9 +156,6 @@ sudo bash deployment/systemd/setup_ec2.sh
 sudo nano backend/.env
 sudo systemctl start car-insurance-agent
 
-# Initialize KB
-cd deployment/docker
-docker compose exec app python scripts/ingest_kb.py
 ```
 
 App is then live at `http://YOUR-EC2-IP/`.
